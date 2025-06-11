@@ -1,39 +1,214 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grit Projects</title>
+    <title>Projetos - Grit</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             background-color: #1e1e1e;
-            color: white;
+            color: #fff;
+            font-family: Arial, sans-serif;
             padding: 40px;
         }
-
         h1 {
-            margin-bottom: 20px;
+            color: #4CAF50;
         }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
+        h2 {
+            border-bottom: 1px solid #444;
+            padding-bottom: 5px;
+            margin-top: 40px;
         }
-
-        li {
-            margin-bottom: 10px;
-            font-size: 18px;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
         }
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #333;
+            text-align: left;
+            vertical-align: top;
+        }
+        .progress-bar {
+            width: 100%;
+            background-color: #333;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 4px;
+        }
+        .progress {
+            height: 20px;
+            background-color: #4CAF50;
+        }
+        .tag {
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            display: inline-block;
+            color: #000;
+        }
+        .discovery { background-color: #FFEB3B; }
+        .prototipacao { background-color: #FFC107; }
+        .desenvolvimento { background-color: #03A9F4; }
+        .suporte { background-color: #8BC34A; }
+        .standby { background-color: #BDBDBD; }
+        .nao-iniciado { background-color: #FF5722; }
     </style>
 </head>
 <body>
 <h1>Projetos da Grit</h1>
-<ul>
-    <li>Projeto X - Início: 01/06/2025</li>
-    <li>Projeto Y - Início: 15/06/2025</li>
-    <li>Projeto Z - Início: 01/07/2025</li>
-    <!-- Adicione mais conforme necessário -->
-</ul>
+
+<h2>Contratos de Escopo Aberto</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Projeto</th>
+        <th>Horas Totais</th>
+        <th>Distribuição</th>
+        <th>Progresso</th>
+        <th>Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Thiago Valdi Art SaaS</td>
+        <td>332</td>
+        <td>
+            <ul>
+                <li>Março: 32h</li>
+                <li>Abril: 84h</li>
+                <li>Maio: 84h</li>
+                <li>Junho: 40h</li>
+                <li>Julho: 40h</li>
+                <li>Agosto: 52h</li>
+            </ul>
+        </td>
+        <td>
+            Utilizado até maio: <strong>200h</strong> / 332h<br>
+            <div class="progress-bar">
+                <div class="progress" style="width: 60.24%"></div>
+            </div>
+            <small>60,2% do contrato concluído</small>
+        </td>
+        <td>Trabalhando nas 40h de junho</td>
+    </tr>
+    <tr>
+        <td>Regente Imóveis</td>
+        <td>160</td>
+        <td>
+            <ul>
+                <li>Maio: 34h</li>
+                <li>Junho: 38h</li>
+                <li>Julho: 41h</li>
+                <li>Agosto: 38h</li>
+                <li>Setembro: 9h</li>
+            </ul>
+        </td>
+        <td>
+            Utilizado até maio: <strong>34h</strong> / 160h<br>
+            <div class="progress-bar">
+                <div class="progress" style="width: 21.25%"></div>
+            </div>
+            <small>21,3% do contrato concluído</small>
+        </td>
+        <td>Trabalhando nas 38h de junho</td>
+    </tr>
+    <tr>
+        <td>ZenBlood</td>
+        <td>20</td>
+        <td>
+            <ul>
+                <li>Horas utilizadas: 9.92h</li>
+                <li>Horas restantes: 10.08h</li>
+            </ul>
+        </td>
+        <td>
+            Utilizado: <strong>9.92h</strong> / 20h<br>
+            <div class="progress-bar">
+                <div class="progress" style="width: 49.6%"></div>
+            </div>
+            <small>49,6% do contrato concluído</small>
+        </td>
+        <td>Contrato ativo, sem data de fim</td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>Projetos de Escopo Fechado</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Projeto</th>
+        <th>Início</th>
+        <th>Fim</th>
+        <th>Dias Passados</th>
+        <th>Dias Restantes</th>
+        <th>Progresso</th>
+        <th>Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Ponto Online</td>
+        <td>2025-04-10</td>
+        <td>2025-12-10</td>
+        <td id="po-days-passed"></td>
+        <td id="po-days-left"></td>
+        <td>
+            <div class="progress-bar">
+                <div class="progress" id="po-bar" style="width: 0%"></div>
+            </div>
+        </td>
+        <td><span class="tag desenvolvimento">Prototipação + Desenvolvimento</span></td>
+    </tr>
+    <tr>
+        <td>Menex</td>
+        <td>2025-04-10</td>
+        <td>2025-07-28</td>
+        <td id="menex-days-passed"></td>
+        <td id="menex-days-left"></td>
+        <td>
+            <div class="progress-bar">
+                <div class="progress" id="menex-bar" style="width: 0%"></div>
+            </div>
+        </td>
+        <td><span class="tag standby">Stand-by (Prototipação do cliente)</span></td>
+    </tr>
+    <tr>
+        <td>Inteligência em Saúde</td>
+        <td>--</td>
+        <td>--</td>
+        <td>0 dias</td>
+        <td>243 dias</td>
+        <td>
+            <div class="progress-bar">
+                <div class="progress" style="width: 0%"></div>
+            </div>
+        </td>
+        <td><span class="tag discovery">Discovery concluído, aguardando pagamento</span></td>
+    </tr>
+    </tbody>
+</table>
+
+<script>
+	function calcularProgresso(idPrefix, inicioStr, fimStr) {
+		const hoje = new Date();
+		const inicio = new Date(inicioStr);
+		const fim = new Date(fimStr);
+
+		const diasTotais = Math.ceil((fim - inicio) / (1000 * 60 * 60 * 24));
+		const diasPassados = Math.max(0, Math.ceil((hoje - inicio) / (1000 * 60 * 60 * 24)));
+		const diasRestantes = Math.max(0, diasTotais - diasPassados);
+		const porcentagem = Math.min(100, (diasPassados / diasTotais) * 100);
+
+		document.getElementById(`${idPrefix}-days-passed`).innerText = diasPassados + ' dias';
+		document.getElementById(`${idPrefix}-days-left`).innerText = diasRestantes + ' dias';
+		document.getElementById(`${idPrefix}-bar`).style.width = porcentagem + '%';
+	}
+
+	calcularProgresso('po', '2025-04-10', '2025-12-10');
+	calcularProgresso('menex', '2025-04-10', '2025-07-28');
+</script>
 </body>
 </html>
