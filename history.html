@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Histórico de Projetos - Grit</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        h2 {
+            border-bottom: 1px solid #444;
+            padding-bottom: 5px;
+            margin-top: 40px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #333;
+            text-align: left;
+            vertical-align: top;
+        }
+        .progress-bar {
+            width: 100%;
+            background-color: #333;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 4px;
+        }
+        .progress {
+            height: 20px;
+            background-color: #4CAF50;
+        }
+        .tag {
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            display: inline-block;
+            color: #000;
+        }
+        .concluido { background-color: #4CAF50; }
+        .finalizado { background-color: #2196F3; }
+        .back-btn {
+            background-color: #666;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .back-btn:hover {
+            background-color: #555;
+        }
+        .completed {
+            background-color: #2e7d32;
+        }
+    </style>
+</head>
+<body>
+<a href="projects.html" class="back-btn">← Voltar para Projetos Ativos</a>
+
+<h1>Histórico de Projetos da Grit</h1>
+
+<h2>Contratos de Escopo Aberto - Finalizados</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Projeto</th>
+        <th>Horas Totais</th>
+        <th>Horas Utilizadas</th>
+        <th>Progresso</th>
+        <th>Status</th>
+        <th>Data de Conclusão</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>ZenBud</td>
+        <td>20</td>
+        <td>20</td>
+        <td>
+            <div class="progress-bar">
+                <div class="progress completed" style="width: 100%"></div>
+            </div>
+            <small>100% concluído</small>
+        </td>
+        <td><span class="tag concluido">Concluído</span></td>
+        <td>2024</td>
+    </tr>
+    <tr>
+        <td>Will7</td>
+        <td>30+</td>
+        <td>30+</td>
+        <td>
+            <div class="progress-bar">
+                <div class="progress completed" style="width: 100%"></div>
+            </div>
+            <small>100% concluído</small>
+        </td>
+        <td><span class="tag concluido">Concluído</span></td>
+        <td>2024</td>
+    </tr>
+    <tr>
+        <td>Thiago Valdi Art SaaS</td>
+        <td>332</td>
+        <td>332</td>
+        <td>
+            <div class="progress-bar">
+                <div class="progress completed" style="width: 100%"></div>
+            </div>
+            <small>100% concluído</small>
+        </td>
+        <td><span class="tag concluido">Concluído</span></td>
+        <td>2024</td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>Detalhes dos Projetos Finalizados</h2>
+
+<h3>ZenBud</h3>
+<table>
+    <thead>
+    <tr>
+        <th>Período</th>
+        <th>Horas Utilizadas</th>
+        <th>Atividades</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Projeto Completo</td>
+        <td>20h</td>
+        <td>Desenvolvimento completo da aplicação</td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>Will7</h3>
+<table>
+    <thead>
+    <tr>
+        <th>Período</th>
+        <th>Horas Utilizadas</th>
+        <th>Atividades</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Projeto Completo</td>
+        <td>30+ horas</td>
+        <td>Desenvolvimento e implementação completa</td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>Thiago Valdi Art SaaS</h3>
+<table>
+    <thead>
+    <tr>
+        <th>Período</th>
+        <th>Horas Utilizadas</th>
+        <th>Atividades</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Março 2024</td>
+        <td>32h</td>
+        <td>Início do desenvolvimento</td>
+    </tr>
+    <tr>
+        <td>Abril 2024</td>
+        <td>84h</td>
+        <td>Desenvolvimento principal</td>
+    </tr>
+    <tr>
+        <td>Maio 2024</td>
+        <td>84h</td>
+        <td>Continuação do desenvolvimento</td>
+    </tr>
+    <tr>
+        <td>Junho 2024</td>
+        <td>40h</td>
+        <td>Finalização de funcionalidades</td>
+    </tr>
+    <tr>
+        <td>Julho 2024</td>
+        <td>40h</td>
+        <td>Testes e ajustes</td>
+    </tr>
+    <tr>
+        <td>Agosto 2024</td>
+        <td>52h</td>
+        <td>Conclusão e entrega final</td>
+    </tr>
+    <tr style="background-color: #2e2e2e; font-weight: bold;">
+        <td>Total</td>
+        <td>332h</td>
+        <td>Projeto SaaS completo finalizado</td>
+    </tr>
+    </tbody>
+</table>
+
+<div style="margin-top: 40px; padding: 20px; background-color: #2e2e2e; border-radius: 8px;">
+    <h3>📊 Resumo do Histórico</h3>
+    <ul>
+        <li><strong>Total de projetos finalizados:</strong> 3</li>
+        <li><strong>Total de horas trabalhadas:</strong> 382+ horas</li>
+        <li><strong>Período:</strong> 2024</li>
+        <li><strong>Taxa de conclusão:</strong> 100% dos projetos entregues com sucesso</li>
+    </ul>
+</div>
+
+</body>
+</html>

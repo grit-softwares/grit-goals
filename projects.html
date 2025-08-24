@@ -58,6 +58,9 @@
 </head>
 <body>
 <h1>Projetos da Grit</h1>
+<div style="margin-bottom: 30px;">
+    <a href="history.html" style="background-color: #FF9800; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">📋 Histórico de Projetos</a>
+</div>
 
 <h2>Contratos de Escopo Aberto</h2>
 <table>
@@ -72,66 +75,27 @@
     </thead>
     <tbody>
     <tr>
-        <td>Thiago Valdi Art SaaS</td>
-        <td>332</td>
-        <td>
-            <ul>
-                <li>Março: 32h</li>
-                <li>Abril: 84h</li>
-                <li>Maio: 84h</li>
-                <li>Junho: 40h</li>
-                <li>Julho: 40h</li>
-                <li>Agosto: 52h</li>
-            </ul>
-        </td>
-        <td>
-            Utilizado até maio: <strong>200h</strong> / 332h<br>
-            <div class="progress-bar">
-                <div class="progress" style="width: 60.24%"></div>
-            </div>
-            <small>60,2% do contrato concluído</small>
-        </td>
-        <td>Trabalhando nas 40h de junho</td>
-    </tr>
-    <tr>
         <td>Regente Imóveis</td>
         <td>160</td>
         <td>
             <ul>
                 <li>Maio: 34h</li>
-                <li>Junho: 38h</li>
+                <li>Junho: 28h</li>
                 <li>Julho: 41h</li>
                 <li>Agosto: 38h</li>
                 <li>Setembro: 9h</li>
             </ul>
         </td>
         <td>
-            Utilizado até maio: <strong>34h</strong> / 160h<br>
+            Utilizado até agosto: <strong>123h</strong> / 160h<br>
             <div class="progress-bar">
-                <div class="progress" style="width: 21.25%"></div>
+                <div class="progress" style="width: 76.88%"></div>
             </div>
-            <small>21,3% do contrato concluído</small>
+            <small>76,9% do contrato concluído</small>
         </td>
-        <td>Trabalhando nas 38h de junho</td>
+        <td>20h utilizadas em agosto, restam 18h + 9h setembro</td>
     </tr>
-    <tr>
-        <td>ZenBlood</td>
-        <td>20</td>
-        <td>
-            <ul>
-                <li>Horas utilizadas: 9.92h</li>
-                <li>Horas restantes: 10.08h</li>
-            </ul>
-        </td>
-        <td>
-            Utilizado: <strong>9.92h</strong> / 20h<br>
-            <div class="progress-bar">
-                <div class="progress" style="width: 49.6%"></div>
-            </div>
-            <small>49,6% do contrato concluído</small>
-        </td>
-        <td>Contrato ativo, sem data de fim</td>
-    </tr>
+
     </tbody>
 </table>
 
@@ -140,8 +104,12 @@
     <thead>
     <tr>
         <th>Projeto</th>
-        <th>Início</th>
-        <th>Fim</th>
+        <th>Data Assinatura</th>
+        <th>Primeiro Pagamento</th>
+        <th>Início do Projeto</th>
+        <th>Meta Interna de Entrega</th>
+        <th>Fim do Projeto</th>
+        <th>Tempo Total</th>
         <th>Dias Passados</th>
         <th>Dias Restantes</th>
         <th>Progresso</th>
@@ -151,8 +119,12 @@
     <tbody>
     <tr>
         <td>Ponto Online</td>
-        <td>2025-04-10</td>
-        <td>2025-12-10</td>
+        <td>03/04/2025</td>
+        <td>04/04/2025</td>
+        <td>07/04/2025</td>
+        <td>--</td>
+        <td>07/12/2025</td>
+        <td id="po-total-time"></td>
         <td id="po-days-passed"></td>
         <td id="po-days-left"></td>
         <td>
@@ -160,12 +132,50 @@
                 <div class="progress" id="po-bar" style="width: 0%"></div>
             </div>
         </td>
+        <td><span class="tag desenvolvimento">Desenvolvimento</span></td>
+    </tr>
+    <tr>
+        <td>Inteligência em Saúde</td>
+        <td>24/06/2025</td>
+        <td>26/06/2025</td>
+        <td>27/06/2025</td>
+        <td>--</td>
+        <td>23/01/2026</td>
+        <td id="inteligencia-total-time"></td>
+        <td id="inteligencia-days-passed"></td>
+        <td id="inteligencia-days-left"></td>
+        <td>
+            <div class="progress-bar">
+                <div class="progress" id="inteligencia-bar" style="width: 0%"></div>
+            </div>
+        </td>
         <td><span class="tag desenvolvimento">Prototipação + Desenvolvimento</span></td>
     </tr>
     <tr>
+        <td>Fotobase</td>
+        <td>13/08/2025</td>
+        <td>14/08/2025</td>
+        <td>15/08/2025</td>
+        <td>13/12/2025</td>
+        <td>12/03/2026</td>
+        <td id="fotobase-total-time"></td>
+        <td id="fotobase-days-passed"></td>
+        <td id="fotobase-days-left"></td>
+        <td>
+            <div class="progress-bar">
+                <div class="progress" id="fotobase-bar" style="width: 0%"></div>
+            </div>
+        </td>
+        <td><span class="tag prototipacao">Prototipação</span></td>
+    </tr>
+    <tr>
         <td>Menex</td>
-        <td>2025-04-10</td>
-        <td>2025-07-28</td>
+        <td>--</td>
+        <td>--</td>
+        <td>10/04/2025</td>
+        <td>--</td>
+        <td>28/07/2025</td>
+        <td id="menex-total-time"></td>
         <td id="menex-days-passed"></td>
         <td id="menex-days-left"></td>
         <td>
@@ -175,18 +185,48 @@
         </td>
         <td><span class="tag standby">Stand-by (Prototipação do cliente)</span></td>
     </tr>
+    </tbody>
+</table>
+
+<h2>Projetos Internos</h2>
+<table>
+    <thead>
     <tr>
-        <td>Inteligência em Saúde</td>
-        <td>--</td>
-        <td>--</td>
-        <td>0 dias</td>
-        <td>243 dias</td>
+        <th>Projeto</th>
+        <th>Início do Projeto</th>
+        <th>Meta de Fim do Projeto</th>
+        <th>Dias Passados</th>
+        <th>Dias Restantes</th>
+        <th>Progresso</th>
+        <th>Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Kairos</td>
+        <td>03/07/2025</td>
+        <td>03/09/2025</td>
+        <td id="kairos-days-passed"></td>
+        <td id="kairos-days-left"></td>
         <td>
             <div class="progress-bar">
-                <div class="progress" style="width: 0%"></div>
+                <div class="progress" id="kairos-bar" style="width: 0%"></div>
             </div>
         </td>
-        <td><span class="tag discovery">Discovery concluído, aguardando pagamento</span></td>
+        <td><span class="tag desenvolvimento">Em desenvolvimento</span></td>
+    </tr>
+    <tr>
+        <td>Kairos Consultores</td>
+        <td>02/08/2025</td>
+        <td>02/11/2025</td>
+        <td id="kairos-consultores-days-passed"></td>
+        <td id="kairos-consultores-days-left"></td>
+        <td>
+            <div class="progress-bar">
+                <div class="progress" id="kairos-consultores-bar" style="width: 0%"></div>
+            </div>
+        </td>
+        <td><span class="tag desenvolvimento">Em desenvolvimento</span></td>
     </tr>
     </tbody>
 </table>
@@ -202,13 +242,39 @@
 		const diasRestantes = Math.max(0, diasTotais - diasPassados);
 		const porcentagem = Math.min(100, (diasPassados / diasTotais) * 100);
 
-		document.getElementById(`${idPrefix}-days-passed`).innerText = diasPassados + ' dias';
-		document.getElementById(`${idPrefix}-days-left`).innerText = diasRestantes + ' dias';
-		document.getElementById(`${idPrefix}-bar`).style.width = porcentagem + '%';
+		// Calcular tempo total em formato legível (apenas para projetos que têm essa coluna)
+		const tempoTotalElement = document.getElementById(`${idPrefix}-total-time`);
+		if (tempoTotalElement) {
+			const meses = Math.floor(diasTotais / 30);
+			const diasSobrando = diasTotais % 30;
+			let tempoTotal = '';
+			if (meses > 0) {
+				tempoTotal = `${meses} ${meses === 1 ? 'mês' : 'meses'}`;
+				if (diasSobrando > 0) {
+					tempoTotal += ` e ${diasSobrando} ${diasSobrando === 1 ? 'dia' : 'dias'}`;
+				}
+			} else {
+				tempoTotal = `${diasTotais} ${diasTotais === 1 ? 'dia' : 'dias'}`;
+			}
+			tempoTotalElement.innerText = tempoTotal;
+		}
+
+		// Atualizar elementos que existem
+		const diasPassadosElement = document.getElementById(`${idPrefix}-days-passed`);
+		const diasRestantesElement = document.getElementById(`${idPrefix}-days-left`);
+		const barraElement = document.getElementById(`${idPrefix}-bar`);
+
+		if (diasPassadosElement) diasPassadosElement.innerText = diasPassados + ' dias';
+		if (diasRestantesElement) diasRestantesElement.innerText = diasRestantes + ' dias';
+		if (barraElement) barraElement.style.width = porcentagem + '%';
 	}
 
-	calcularProgresso('po', '2025-04-10', '2025-12-10');
+	calcularProgresso('po', '2025-04-07', '2025-12-07');
 	calcularProgresso('menex', '2025-04-10', '2025-07-28');
+	calcularProgresso('inteligencia', '2025-06-27', '2026-01-23');
+	calcularProgresso('fotobase', '2025-08-15', '2026-03-12');
+	calcularProgresso('kairos', '2025-07-03', '2025-09-03');
+	calcularProgresso('kairos-consultores', '2025-08-02', '2025-11-02');
 </script>
 </body>
 </html>
